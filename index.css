@@ -11,6 +11,7 @@ body {
     width:100%;
     display: flex;
     justify-content: space-between;
+    font-size: large;
     align-items: center;
     background-color: #ff0000;
     color: white;
@@ -54,7 +55,7 @@ body {
 .hero {
     background-color: #f2f2f2;
     text-align: center;
-    padding: 80px 20px; /* Adjust for header height */
+    padding: 100px 10px; /* Adjust for header height */
 }
 
 .hero h1 {
@@ -100,7 +101,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
-    width: 250px;
+    width: 350px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -127,28 +128,74 @@ body {
     background-color: #333;
     color: white;
     padding: 10px 0;
+
+    
+}
+.footer .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.footer .nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
-        justify-content: space-around;
+@media (max-width: 600px) {
+    /* Header Section */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      position: relative; /* Ensure header doesn't overlap other sections */
+      z-index: 10; /* Ensure header stays on top if needed */
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column; /* Stack navigation items vertically */
+      align-items: center;
+    }
+  
+    /* Hero Section */
+    .hero {
+      text-align: center; /* Center-align hero content */
+      padding: 10px;
+      margin-top: 0; /* Remove any negative margin */
+      position:relative; 
+      /* Ensure proper stacking */
+    }
+  
+    .hero img {
+      width: 100%; /* Ensure images are responsive */
+      max-width: 400px; /* Optional: limit max width */
+      height: auto; /* Maintain aspect ratio */
+      margin: 0 auto;
+    }
+    .service-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        width: 470px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card img {
+        width: fit-content;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    .header{
+        width: 100%;
     }
 
-    .header .nav-links {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-        
-   
-    }
-    .logo-img {
-        height: 55px;
-        margin-right: 10px;
-    }
-}    
+  }
+    
