@@ -8,7 +8,7 @@ body {
 
 /* Header Styles */
 .header {
-    width:98%;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
